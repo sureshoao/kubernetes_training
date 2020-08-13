@@ -86,7 +86,7 @@ kubectl logs busybox
 </p>
 </details>
 
-### Create a busybox pod (using YAML) that runs the command "env". Run it and see the output
+### 4. Create a busybox pod (using YAML) that runs the command "env". Run it and see the output
 
 <details><summary>show</summary>
 <p>
@@ -127,7 +127,7 @@ kubectl logs busybox
 </p>
 </details>
 
-### Get the YAML for a new namespace called 'myns' without creating it
+### 5. Get the YAML for a new namespace called 'myns' without creating it
 
 <details><summary>show</summary>
 <p>
