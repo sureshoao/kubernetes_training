@@ -1,6 +1,6 @@
 # Core Concepts
 
-### 1. Create a namespace called 'mynamespace' and a pod with image nginx called nginx on this namespace
+### 1. Create a namespace called 'suresh' and a pod with image nginx called nginx on this namespace
 
 <details><summary>show</summary>
 <p>
