@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: tea
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tea
+  template: 
+    metadata:
+      labels:
+        app: tea
+    spec:
+      containers:
+      - name: tea
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            port: 8080
+            path: /healthz/tea
+            httpHeaders:
+            - name: header1
+              value: "some value"
+            - name: header2
+              value: "123"
+          initialDelaySeconds: 1
+          periodSeconds: 5
+          timeoutSeconds: 4
+          successThreshold: 2
+          failureThreshold: 3
